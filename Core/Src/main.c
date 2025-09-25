@@ -213,7 +213,7 @@ int main(void)
 //  W25Q16_Test();  /*F407开发板上的Flash是W25Q16,只有2MB,32个块*/\
 
 	led_init();
-	lcd_init(1);//0，竖屏；1，横屏。每次切换显示方式要重新校准，按下K1校准
+	lcd_init(0);//0，竖屏；1，横屏。每次切换显示方式要重新校准，按下K1校准
 	key_init();
 	tp_dev.init();
 
