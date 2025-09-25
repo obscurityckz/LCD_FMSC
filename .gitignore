@@ -1,0 +1,9 @@
+.mxproject
+02_stm32F407_FSMC.ioc
+LCD的Flash被硬件保护了，无法修改，除非把WP外界高电平.txt
+显示方向和字模已经调试好，能够横向和竖向按照书面格式显示.txt
+
+.vscode/*
+Drivers/CMSIS/*
+MDK-ARM/*
+Drivers/STM32F4xx_HAL_Driver/LICENSE.txt
