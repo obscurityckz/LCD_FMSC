@@ -250,7 +250,7 @@ void lcd_fill(uint16_t sx, uint16_t sy, uint16_t ex, uint16_t ey, uint32_t color
 {
 	uint16_t xlen = 0;
 	xlen = ex - (sx - 1);
-	for(uint16_t i = 0; i < ey; i++)
+	for(uint16_t i = sy; i < ey; i++)
 	{
 		lcd_set_cursor(sx, i);					//设置光标的航向
 		LCD->LCD_REG = lcddev.wramcmd;
