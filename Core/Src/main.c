@@ -218,10 +218,7 @@ int main(void)
 	tp_dev.init();
 
 
-lcd_clear(WHITE);
-lcd_show_string(40, 160, lcddev.width, lcddev.height, 16, "Screen Exit Adjust!", RED);
-HAL_Delay(1000);
-lcd_clear(WHITE);
+
 lcd_draw_dialog();
 
 if(tp_dev.touchtype & 0x80)

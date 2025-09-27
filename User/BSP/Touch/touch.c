@@ -54,7 +54,14 @@ uint8_t XPT2046_init(void)
         TP_ReadForDifferentDir_xy(&tp_dev.x[0], &tp_dev.y[0]); //第一次读取初始化
 
        if(TP_GetAdjustData() == 0)//已经校准，避免初始化重复校准
-           return 1;
+	   {
+			lcd_clear(WHITE);
+			lcd_show_string(40, 160, lcddev.width, lcddev.height, 16, "Screen Exit Adjust!", RED);
+			HAL_Delay(1000);
+			lcd_clear(WHITE);
+		   
+		   return 1;
+	   }
        else
        {
            lcd_clear(WHITE);    
